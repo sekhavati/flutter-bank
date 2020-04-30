@@ -9,7 +9,17 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       body: SafeArea(
-        child: Transactions(),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(
+            horizontal: 48,
+            vertical: 24,
+          ),
+          child: Column(
+            children: <Widget>[
+              Expanded(child: Transactions()),
+            ],
+          ),
+        ),
       ),
     );
   }
