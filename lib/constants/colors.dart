@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 const kSwatchColor1 = Color(0xffdadaea);
 const kSwatchColor2 = Color(0xff020203);
 const kSwatchColor3 = Color(0xffb4b4cc);
