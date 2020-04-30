@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutterbank/screens/home.dart';
-import 'package:flutterbank/screens/account-overview.dart';
+import 'package:flutterbank/screens/account_overview.dart';
 
 void main() => runApp(MyApp());
 

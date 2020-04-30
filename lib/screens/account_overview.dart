@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutterbank/widgets/account-card.dart';
+import 'package:flutterbank/widgets/account_card.dart';
 //import 'package:flutterbank/widgets/transactions.dart';
 
 class AccountOverviewScreen extends StatelessWidget {
