@@ -10,7 +10,9 @@ class Transaction extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         TransactionIcon(),
-        TransactionDescription(),
+        Expanded(
+          child: TransactionDescription(),
+        ),
         TransactionAmount(),
       ],
     );
