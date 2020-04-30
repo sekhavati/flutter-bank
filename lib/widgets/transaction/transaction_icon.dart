@@ -5,10 +5,10 @@ class TransactionIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(10),
+      padding: EdgeInsets.all(12),
       decoration: BoxDecoration(
         color: kSwatchColor1,
-        borderRadius: BorderRadius.circular(17),
+        borderRadius: BorderRadius.circular(18),
       ),
       child: Icon(
         Icons.shopping_basket,
