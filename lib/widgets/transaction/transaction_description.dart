@@ -1,28 +1,29 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutterbank/constants/colors.dart';
 
-class TransactionAmount extends StatelessWidget {
+class TransactionDescription extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         Text(
-          '\$',
+          'Taxi',
           style: TextStyle(
-            color: kSwatchColor3,
-            fontSize: 16,
+            color: kSwatchColor2,
+            fontSize: 18,
             fontWeight: FontWeight.bold,
           ),
         ),
         SizedBox(
-          width: 2,
+          height: 2,
         ),
         Text(
-          '56',
+          '8:00 AM',
           style: TextStyle(
-            color: kSwatchColor2,
-            fontSize: 16,
-            fontWeight: FontWeight.bold,
+            color: kSwatchColor3,
+            fontSize: 12,
+            fontWeight: FontWeight.w500,
           ),
         ),
       ],

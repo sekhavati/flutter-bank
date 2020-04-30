@@ -1,12 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutterbank/widgets/transaction/transaction_amount.dart';
+import 'package:flutterbank/widgets/transaction/transaction_description.dart';
 import 'package:flutterbank/widgets/transaction/transaction_icon.dart';
 
 class Transaction extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      children: <Widget>[TransactionIcon(), TransactionAmount()],
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        TransactionIcon(),
+        TransactionDescription(),
+        TransactionAmount(),
+      ],
     );
   }
 }
