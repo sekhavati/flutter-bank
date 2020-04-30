@@ -7,11 +7,17 @@ class Transaction extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      crossAxisAlignment: CrossAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: <Widget>[
-        TransactionIcon(),
+        Container(
+          child: TransactionIcon(),
+          margin: EdgeInsets.only(right: 20),
+        ),
         Expanded(
-          child: TransactionDescription(),
+          child: Container(
+            child: TransactionDescription(),
+            margin: EdgeInsets.only(right: 20),
+          ),
         ),
         TransactionAmount(),
       ],
