@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      initialRoute: AccountOverviewScreen.kRouteId,
+      initialRoute: HomeScreen.kRouteId,
       routes: {
         HomeScreen.kRouteId: (context) => HomeScreen(),
         AccountOverviewScreen.kRouteId: (context) => AccountOverviewScreen()
