@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutterbank/widgets/transactions.dart';
+import 'package:flutterbank/widgets/cards.dart';
 
 class HomeScreen extends StatelessWidget {
   static String kRouteId = "home";
@@ -16,6 +17,7 @@ class HomeScreen extends StatelessWidget {
           ),
           child: Column(
             children: <Widget>[
+              Expanded(child: Cards()),
               Expanded(child: Transactions()),
             ],
           ),

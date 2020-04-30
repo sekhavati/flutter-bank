@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutterbank/widgets/account_card.dart';
-//import 'package:flutterbank/widgets/transactions.dart';
 
 class AccountOverviewScreen extends StatelessWidget {
   static String kRouteId = "account-overview";
@@ -10,15 +8,7 @@ class AccountOverviewScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.lightBlueAccent,
       body: SafeArea(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            Text('Cards'),
-            AccountCard(),
-            Text('Transactions'),
-//            Transactions(),
-          ],
-        ),
+        child: Container(),
       ),
     );
   }
