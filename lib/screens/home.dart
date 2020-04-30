@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterbank/constants/colors.dart';
 import 'package:flutterbank/widgets/transaction.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -7,7 +8,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.red,
+      backgroundColor: Colors.white,
       body: SafeArea(
         child: Transaction(),
       ),
