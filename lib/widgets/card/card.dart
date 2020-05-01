@@ -1,6 +1,7 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutterbank/constants/colors.dart';
 import 'package:flutterbank/widgets/card/card_balance.dart';
+import 'package:flutterbank/widgets/card/card_logo.dart';
 
 class Card extends StatelessWidget {
   @override
@@ -14,7 +15,21 @@ class Card extends StatelessWidget {
       ),
       child: Padding(
         padding: const EdgeInsets.all(36.0),
-        child: CardBalance(),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                CardLogo(),
+              ],
+            ),
+            SizedBox(
+              height: 12,
+            ),
+            CardBalance(),
+          ],
+        ),
       ),
     );
   }
