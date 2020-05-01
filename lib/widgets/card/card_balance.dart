@@ -12,11 +12,8 @@ class CardBalance extends StatelessWidget {
           style: TextStyle(
             color: Colors.white,
             fontSize: 14,
-            fontWeight: FontWeight.bold,
+            fontWeight: FontWeight.w500,
           ),
-        ),
-        SizedBox(
-          height: 4,
         ),
         Text(
           '£4,537.24',
