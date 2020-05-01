@@ -1,5 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutterbank/constants/colors.dart';
+import 'package:flutterbank/widgets/card/card.dart';
 import 'package:flutterbank/widgets/transaction/transaction.dart';
 
 class Cards extends StatelessWidget {
@@ -19,8 +20,9 @@ class Cards extends StatelessWidget {
         SizedBox(
           height: 28,
         ),
-        Expanded(
-          child: Container(),
+        Padding(
+          padding: const EdgeInsets.only(bottom: 24.0),
+          child: Card(),
         ),
       ],
     );

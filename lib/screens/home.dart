@@ -16,6 +16,7 @@ class HomeScreen extends StatelessWidget {
             vertical: 24,
           ),
           child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               Expanded(child: Cards()),
               Expanded(child: Transactions()),
