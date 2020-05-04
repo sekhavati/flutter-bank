@@ -7,6 +7,7 @@ class SwipeAnchor extends StatelessWidget {
     return Container(
       height: 5,
       width: 40,
+      margin: EdgeInsets.only(bottom: 16),
       decoration: BoxDecoration(
         color: kSwatchColor1,
         borderRadius: BorderRadius.all(

@@ -13,11 +13,15 @@ class Card extends StatelessWidget {
       width: double.infinity,
       decoration: BoxDecoration(
         color: kSwatchColor2,
+        image: new DecorationImage(
+          image: AssetImage('images/card-background.png'),
+          fit: BoxFit.cover,
+        ),
         borderRadius: BorderRadius.circular(18),
         boxShadow: [
           BoxShadow(
             color: Colors.grey,
-            blurRadius: 20,
+            blurRadius: 10,
             offset: Offset(
               0.0,
               10.0,

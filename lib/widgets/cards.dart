@@ -21,7 +21,7 @@ class Cards extends StatelessWidget {
           height: 28,
         ),
         Padding(
-          padding: const EdgeInsets.only(bottom: 24.0),
+          padding: const EdgeInsets.only(bottom: 15.0),
           child: Card(),
         ),
       ],
