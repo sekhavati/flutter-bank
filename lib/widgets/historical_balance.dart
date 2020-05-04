@@ -3,6 +3,20 @@ import 'package:flutter/widgets.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutterbank/constants/colors.dart';
 
+// @todo: these constants will be feed in as props eventually
+const kMaxY = 7.0; // base on something like max value + 10% for some headroom
+const kBackgroundColor = kSwatchColor2;
+const kAxisLabelsColor = kSwatchColor4;
+const kLineColor = kSwatchColor9;
+const kHistoricalBalances = [
+  1.0,
+  3.0,
+  2.0,
+  4.0,
+  3.0,
+  5.0
+]; // assume 6 points = last 6 months of data
+
 class HistoricalBalance extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -14,8 +28,8 @@ class HistoricalBalance extends StatelessWidget {
           padding: const EdgeInsets.all(12.0),
           child: LineChart(
             LineChartData(
-              backgroundColor: kSwatchColor2,
-              maxY: 7,
+              backgroundColor: kBackgroundColor,
+              maxY: kMaxY,
               borderData: FlBorderData(
                 show: false,
               ),
@@ -34,7 +48,7 @@ class HistoricalBalance extends StatelessWidget {
                 bottomTitles: SideTitles(
                   showTitles: true,
                   textStyle: const TextStyle(
-                    color: kSwatchColor4,
+                    color: kAxisLabelsColor,
                     fontWeight: FontWeight.bold,
                     fontSize: 12,
                   ),
@@ -52,6 +66,18 @@ class HistoricalBalance extends StatelessWidget {
                         return "May";
                       case 5:
                         return "Jun";
+                      case 6:
+                        return "Jul";
+                      case 7:
+                        return "Aug";
+                      case 8:
+                        return "Sep";
+                      case 9:
+                        return "Oct";
+                      case 10:
+                        return "Nov";
+                      case 11:
+                        return "Dec";
                       default:
                         return '';
                     }
@@ -61,26 +87,25 @@ class HistoricalBalance extends StatelessWidget {
               ),
               lineBarsData: [
                 LineChartBarData(
-                  colors: [kSwatchColor9],
+                  colors: [kLineColor],
                   dotData: FlDotData(
                     show: false,
                   ),
                   isCurved: true,
-                  preventCurveOverShooting: true,
                   barWidth: 4,
                   belowBarData: BarAreaData(
                     show: true,
                     colors: [
-                      kSwatchColor9.withOpacity(0.3),
+                      kLineColor.withOpacity(0.3),
                     ],
                   ),
                   spots: [
-                    FlSpot(0, 1),
-                    FlSpot(1, 3),
-                    FlSpot(2, 2),
-                    FlSpot(3, 4),
+                    FlSpot(3, 1),
                     FlSpot(4, 3),
-                    FlSpot(5, 5),
+                    FlSpot(5, 2),
+                    FlSpot(6, 4),
+                    FlSpot(7, 3),
+                    FlSpot(8, 5),
                   ],
                 ),
               ],
