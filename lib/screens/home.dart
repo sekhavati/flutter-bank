@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterbank/widgets/historical_balance.dart';
 import 'package:flutterbank/widgets/transactions.dart';
 import 'package:flutterbank/widgets/cards.dart';
 
@@ -18,6 +19,7 @@ class HomeScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
+              Expanded(child: HistoricalBalance()),
               Expanded(child: Cards()),
               Expanded(child: Transactions()),
             ],

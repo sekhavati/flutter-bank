@@ -8,3 +8,4 @@ const kSwatchColor5 = Color(0xffa06f6d);
 const kSwatchColor6 = Color(0xff4b2db5);
 const kSwatchColor7 = Color(0xff504754);
 const kSwatchColor8 = Color(0xffd4b2c8);
+const kSwatchColor9 = Color(0xffff1f6d);
