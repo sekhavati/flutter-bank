@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutterbank/constants/colors.dart';
 import 'package:flutterbank/widgets/card/card_balance.dart';
@@ -13,6 +14,16 @@ class Card extends StatelessWidget {
       decoration: BoxDecoration(
         color: kSwatchColor2,
         borderRadius: BorderRadius.circular(18),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.grey,
+            blurRadius: 20,
+            offset: Offset(
+              0.0,
+              10.0,
+            ),
+          ),
+        ],
       ),
       child: Padding(
         padding: const EdgeInsets.all(36.0),
