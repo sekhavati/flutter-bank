@@ -17,7 +17,7 @@ const kHistoricalBalances = [
   5.0
 ]; // assume 6 points = last 6 months of data
 
-class HistoricalBalance extends StatelessWidget {
+class BalanceChart extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AspectRatio(

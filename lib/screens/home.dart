@@ -4,7 +4,7 @@ import 'package:flutterbank/widgets/header.dart';
 import 'package:flutterbank/widgets/drag_handle.dart';
 import 'package:solid_bottom_sheet/solid_bottom_sheet.dart';
 
-import 'package:flutterbank/widgets/historical_balance.dart';
+import 'package:flutterbank/widgets/balance_chart.dart';
 import 'package:flutterbank/widgets/transactions.dart';
 import 'package:flutterbank/widgets/cards.dart';
 
@@ -28,7 +28,7 @@ class HomeScreen extends StatelessWidget {
               SizedBox(
                 height: 24,
               ),
-              HistoricalBalance(),
+              BalanceChart(),
             ],
           ),
         ),
