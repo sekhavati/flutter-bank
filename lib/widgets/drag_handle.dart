@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutterbank/constants/colors.dart';
 
-class SwipeAnchor extends StatelessWidget {
+class DragHandle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
