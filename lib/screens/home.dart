@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutterbank/constants/colors.dart';
+import 'package:flutterbank/widgets/balance_total.dart';
 import 'package:flutterbank/widgets/header.dart';
 import 'package:flutterbank/widgets/drag_handle.dart';
 import 'package:solid_bottom_sheet/solid_bottom_sheet.dart';
@@ -22,9 +23,13 @@ class HomeScreen extends StatelessWidget {
             vertical: 24,
           ),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
               Header(),
+              SizedBox(
+                height: 24,
+              ),
+              BalanceTotal(),
               SizedBox(
                 height: 24,
               ),
