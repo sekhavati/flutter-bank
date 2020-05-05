@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutterbank/constants/colors.dart';
-import 'package:flutterbank/widgets/swipe_anchor.dart';
+import 'package:flutterbank/widgets/header.dart';
+import 'package:flutterbank/widgets/drag_handle.dart';
 import 'package:solid_bottom_sheet/solid_bottom_sheet.dart';
 
 import 'package:flutterbank/widgets/historical_balance.dart';
@@ -23,6 +24,10 @@ class HomeScreen extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
+              Header(),
+              SizedBox(
+                height: 24,
+              ),
               HistoricalBalance(),
             ],
           ),
@@ -46,7 +51,7 @@ class HomeScreen extends StatelessWidget {
             ),
             child: Column(
               children: <Widget>[
-                SwipeAnchor(),
+                DragHandle(),
                 Cards(),
               ],
             ),
