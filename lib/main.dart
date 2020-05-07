@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutterbank/screens/home.dart';
-import 'package:flutterbank/screens/account_overview.dart';
 
 void main() => runApp(MyApp());
 
@@ -25,7 +24,6 @@ class MyApp extends StatelessWidget {
       initialRoute: HomeScreen.kRouteId,
       routes: {
         HomeScreen.kRouteId: (context) => HomeScreen(),
-        AccountOverviewScreen.kRouteId: (context) => AccountOverviewScreen()
       },
     );
   }
