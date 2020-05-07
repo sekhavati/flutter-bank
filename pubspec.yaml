@@ -26,6 +26,7 @@ dependencies:
   fl_chart: ^0.9.4
   solid_bottom_sheet: ^0.1.9
   http: ^0.12.1
+  provider: ^4.1.0
 
 dev_dependencies:
   flutter_test:

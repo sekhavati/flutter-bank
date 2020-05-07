@@ -1,5 +1,7 @@
 import 'package:flutter/widgets.dart';
+import 'package:flutterbank/models/account.dart';
 import 'package:flutterbank/screens/home.dart';
+import 'package:provider/provider.dart';
 
 class HomeScreenController extends StatefulWidget {
   static const String kRouteId = "home";
@@ -11,6 +13,11 @@ class HomeScreenController extends StatefulWidget {
 class _HomeScreenControllerState extends State<HomeScreenController> {
   @override
   Widget build(BuildContext context) {
-    return HomeScreen();
+    return Provider(
+      child: HomeScreen(),
+      create: (_) {
+        return Account(totalBalance: 456.99);
+      },
+    );
   }
 }

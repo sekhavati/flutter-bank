@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutterbank/constants/colors.dart';
+import 'package:flutterbank/models/account.dart';
+import 'package:provider/provider.dart';
 
 class BalanceTotal extends StatelessWidget {
   @override
@@ -16,7 +18,7 @@ class BalanceTotal extends StatelessWidget {
           ),
         ),
         Text(
-          '\$12,634.37',
+          Provider.of<Account>(context).totalBalance.toString(),
           style: TextStyle(
             color: Colors.white,
             fontSize: 28,
