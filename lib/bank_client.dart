@@ -6,7 +6,7 @@ import 'package:http/testing.dart';
 import 'package:flutterbank/models/account.dart';
 
 class BankClient {
-  final BaseClient _httpClient = MockClient(mockRequestHandler);
+  final BaseClient _httpClient = MockClient(_mockRequestHandler);
 
   Future<Account> getAccountDetails() async {
     final response = await _httpClient.get("/account");
@@ -14,16 +14,17 @@ class BankClient {
   }
 }
 
-Future<Response> mockRequestHandler(Request request) {
+Future<Response> _mockRequestHandler(Request request) {
+  int statusCode = 500;
   String response = "";
-  int statusCode = 200;
 
   switch (request.url.path) {
     case "/account":
+      statusCode = 200;
       response = accountJson;
       break;
     default:
-      statusCode = 400;
+      statusCode = 404;
       break;
   }
 
