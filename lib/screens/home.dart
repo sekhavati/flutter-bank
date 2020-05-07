@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterbank/bank_client.dart';
 import 'package:flutterbank/constants/colors.dart';
 import 'package:flutterbank/widgets/balance_total.dart';
 import 'package:flutterbank/widgets/header.dart';
@@ -14,6 +15,9 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    BankClient test = BankClient();
+    print(test.getAccountDetails());
+
     return Scaffold(
       backgroundColor: kSwatchColor2,
       body: SafeArea(
