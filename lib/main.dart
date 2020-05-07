@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutterbank/controllers/home.dart';
 import 'package:flutterbank/screens/home.dart';
 
 void main() => runApp(MyApp());
@@ -21,9 +22,9 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      initialRoute: HomeScreen.kRouteId,
+      initialRoute: HomeScreenController.kRouteId,
       routes: {
-        HomeScreen.kRouteId: (context) => HomeScreen(),
+        HomeScreenController.kRouteId: (context) => HomeScreenController(),
       },
     );
   }
