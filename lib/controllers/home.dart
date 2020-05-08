@@ -12,33 +12,25 @@ class HomeScreenController extends StatefulWidget {
 }
 
 class _HomeScreenControllerState extends State<HomeScreenController> {
-  bool _isLoading = true;
-  Account _account;
-
-  void loadAccountDetails() async {
-    Account account = await BankClient().getAccountDetails();
-
-    setState(() {
-      _account = account;
-      updateLoadingStatus();
-    });
-  }
-
-  void updateLoadingStatus() {
-    setState(() {
-      _isLoading = _account == null;
-    });
-  }
-
-  @override
-  void initState() {
-    super.initState();
-
-    loadAccountDetails();
-  }
+  final BankClient _bankClient = BankClient();
 
   @override
   Widget build(BuildContext context) {
-    return _isLoading ? LoadingSpinner() : HomeScreen(account: _account);
+    return FutureBuilder(
+      future: Future.wait([
+        _bankClient.getAccountDetails(),
+      ]),
+      builder: (context, snapshot) {
+        if (!snapshot.hasData) {
+          return LoadingSpinner();
+        }
+
+        final account = snapshot.data[0];
+
+        return HomeScreen(
+          account: account,
+        );
+      },
+    );
   }
 }
