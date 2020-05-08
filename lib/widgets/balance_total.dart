@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutterbank/constants/colors.dart';
-import 'package:flutterbank/models/account.dart';
-import 'package:provider/provider.dart';
 
 class BalanceTotal extends StatelessWidget {
+  final double balance;
+
+  BalanceTotal(this.balance);
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -18,7 +20,7 @@ class BalanceTotal extends StatelessWidget {
           ),
         ),
         Text(
-          Provider.of<Account>(context).totalBalance.toString(),
+          '£${balance.toString()}',
           style: TextStyle(
             color: Colors.white,
             fontSize: 28,

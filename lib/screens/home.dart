@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutterbank/constants/colors.dart';
+import 'package:flutterbank/models/account.dart';
 import 'package:flutterbank/widgets/balance_total.dart';
 import 'package:flutterbank/widgets/header.dart';
 import 'package:flutterbank/widgets/drag_handle.dart';
@@ -10,6 +11,10 @@ import 'package:flutterbank/widgets/transactions.dart';
 import 'package:flutterbank/widgets/cards.dart';
 
 class HomeScreen extends StatelessWidget {
+  final Account account;
+
+  HomeScreen({this.account});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,7 +32,7 @@ class HomeScreen extends StatelessWidget {
               SizedBox(
                 height: 24,
               ),
-              BalanceTotal(),
+              BalanceTotal(account != null ? account.totalBalance : 0),
               SizedBox(
                 height: 24,
               ),
