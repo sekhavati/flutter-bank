@@ -28,8 +28,9 @@ Future<Response> _mockRequestHandler(Request request) {
       break;
   }
 
+  // Fake an async response
   return Future.delayed(
-    Duration(seconds: 1),
+    Duration(seconds: 3),
     () => Response(response, statusCode),
   );
 }
