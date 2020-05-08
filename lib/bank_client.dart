@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:math';
 
 import 'package:flutterbank/mocks/account.dart';
 import 'package:http/http.dart';
@@ -28,9 +29,13 @@ Future<Response> _mockRequestHandler(Request request) {
       break;
   }
 
+  final randomDelay = Random().nextInt(4) + 1; // range of 1-5
+
   // Fake an async response
   return Future.delayed(
-    Duration(seconds: 3),
+    Duration(
+      seconds: randomDelay,
+    ),
     () => Response(response, statusCode),
   );
 }
