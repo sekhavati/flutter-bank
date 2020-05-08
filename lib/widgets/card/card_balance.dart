@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class CardBalance extends StatelessWidget {
+  final double balance;
+
+  CardBalance(this.balance);
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -16,7 +20,7 @@ class CardBalance extends StatelessWidget {
           ),
         ),
         Text(
-          '£4,537.24',
+          '£${balance.toStringAsFixed(2)}',
           style: TextStyle(
             color: Colors.white,
             fontSize: 28,

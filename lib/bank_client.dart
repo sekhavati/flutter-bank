@@ -1,17 +1,27 @@
 import 'dart:convert';
 import 'dart:math';
-
-import 'package:flutterbank/mocks/account.dart';
 import 'package:http/http.dart';
 import 'package:http/testing.dart';
+
+import 'package:flutterbank/mocks/account.dart';
+import 'package:flutterbank/mocks/card.dart';
+import 'package:flutterbank/models/card.dart';
 import 'package:flutterbank/models/account.dart';
+
+const ACCOUNT_ENDPOINT = "/account";
+const CARD_ENDPOINT = "/card";
 
 class BankClient {
   final BaseClient _httpClient = MockClient(_mockRequestHandler);
 
-  Future<Account> getAccountDetails() async {
-    final response = await _httpClient.get("/account");
-    return Account.fromJson(json.decode(response.body));
+  Future<AccountModel> getAccountDetails() async {
+    final response = await _httpClient.get(ACCOUNT_ENDPOINT);
+    return AccountModel.fromJson(json.decode(response.body));
+  }
+
+  Future<CardModel> getCardDetails() async {
+    final response = await _httpClient.get(CARD_ENDPOINT);
+    return CardModel.fromJson(json.decode(response.body));
   }
 }
 
@@ -20,9 +30,13 @@ Future<Response> _mockRequestHandler(Request request) {
   String response = "";
 
   switch (request.url.path) {
-    case "/account":
+    case ACCOUNT_ENDPOINT:
       statusCode = 200;
       response = accountJson;
+      break;
+    case CARD_ENDPOINT:
+      statusCode = 200;
+      response = cardJson;
       break;
     default:
       statusCode = 404;

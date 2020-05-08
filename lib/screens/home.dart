@@ -1,19 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:solid_bottom_sheet/solid_bottom_sheet.dart';
+
 import 'package:flutterbank/constants/colors.dart';
 import 'package:flutterbank/models/account.dart';
+import 'package:flutterbank/models/card.dart';
 import 'package:flutterbank/widgets/balance_total.dart';
 import 'package:flutterbank/widgets/header.dart';
 import 'package:flutterbank/widgets/drag_handle.dart';
-import 'package:solid_bottom_sheet/solid_bottom_sheet.dart';
-
 import 'package:flutterbank/widgets/balance_chart.dart';
 import 'package:flutterbank/widgets/transactions.dart';
 import 'package:flutterbank/widgets/cards.dart';
 
 class HomeScreen extends StatelessWidget {
-  final Account account;
+  final AccountModel account;
+  final CardModel card;
 
-  HomeScreen({this.account});
+  HomeScreen({
+    this.account,
+    this.card,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -60,7 +66,7 @@ class HomeScreen extends StatelessWidget {
             child: Column(
               children: <Widget>[
                 DragHandle(),
-                Cards(),
+                Cards(cards: [card]),
               ],
             ),
           ),
@@ -71,7 +77,7 @@ class HomeScreen extends StatelessWidget {
             vertical: 24,
           ),
           color: Colors.white,
-          child: Transactions(),
+          child: Transactions(card.transactions),
         ),
       ),
     );

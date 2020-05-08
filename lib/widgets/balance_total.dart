@@ -20,7 +20,7 @@ class BalanceTotal extends StatelessWidget {
           ),
         ),
         Text(
-          '£${balance.toString()}',
+          '£${balance.toStringAsFixed(2)}',
           style: TextStyle(
             color: Colors.white,
             fontSize: 28,

@@ -1,11 +1,11 @@
-class Account {
+class AccountModel {
   final double totalBalance;
 
-  Account({this.totalBalance});
+  AccountModel({this.totalBalance});
 
-  factory Account.fromJson(Map<String, dynamic> json) {
+  factory AccountModel.fromJson(Map<String, dynamic> json) {
     final double totalBalance = json['totalBalance'];
 
-    return Account(totalBalance: totalBalance);
+    return AccountModel(totalBalance: totalBalance);
   }
 }

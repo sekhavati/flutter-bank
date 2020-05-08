@@ -19,6 +19,7 @@ class _HomeScreenControllerState extends State<HomeScreenController> {
     return FutureBuilder(
       future: Future.wait([
         _bankClient.getAccountDetails(),
+        _bankClient.getCardDetails(),
       ]),
       builder: (context, snapshot) {
         if (!snapshot.hasData) {
@@ -26,10 +27,9 @@ class _HomeScreenControllerState extends State<HomeScreenController> {
         }
 
         final account = snapshot.data[0];
+        final card = snapshot.data[1];
 
-        return HomeScreen(
-          account: account,
-        );
+        return HomeScreen(account: account, card: card);
       },
     );
   }

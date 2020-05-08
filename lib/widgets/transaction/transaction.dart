@@ -4,6 +4,12 @@ import 'package:flutterbank/widgets/transaction/transaction_description.dart';
 import 'package:flutterbank/widgets/transaction/transaction_icon.dart';
 
 class Transaction extends StatelessWidget {
+  final double amount;
+  final String description;
+  final DateTime time;
+
+  Transaction({this.amount, this.description, this.time});
+
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -15,29 +21,15 @@ class Transaction extends StatelessWidget {
         ),
         Expanded(
           child: Container(
-            child: TransactionDescription(),
+            child: TransactionDescription(
+              description: description,
+              time: time,
+            ),
             margin: EdgeInsets.only(right: 20),
           ),
         ),
-        TransactionAmount(),
+        TransactionAmount(amount),
       ],
     );
   }
 }
-
-//Row(
-//      crossAxisAlignment: CrossAxisAlignment.start,
-//      children: <Widget>[
-//        Icon(Icons.shopping_cart),
-//        Column(
-//          crossAxisAlignment: CrossAxisAlignment.start,
-//          children: <Widget>[
-//            Text('Tesco'),
-//            Text(
-//              DateTime.now().toString(),
-//            ),
-//          ],
-//        ),
-//        Text('£12.99')
-//      ],
-//    )

@@ -1,8 +1,13 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutterbank/constants/colors.dart';
+import 'package:flutterbank/models/transaction.dart';
 import 'package:flutterbank/widgets/transaction/transaction.dart';
 
 class Transactions extends StatelessWidget {
+  final List<TransactionModel> transactions;
+
+  Transactions(this.transactions);
+
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -21,13 +26,19 @@ class Transactions extends StatelessWidget {
         ),
         Expanded(
           child: ListView.builder(
-            itemCount: 5,
+            itemCount: transactions.length,
             itemBuilder: (BuildContext context, int index) {
+              final nextTransaction = transactions[index];
+
               return Padding(
                 padding: const EdgeInsets.only(
                   bottom: 24,
                 ),
-                child: Transaction(),
+                child: Transaction(
+                  time: nextTransaction.time,
+                  description: nextTransaction.description,
+                  amount: nextTransaction.amount,
+                ),
               );
             },
           ),
