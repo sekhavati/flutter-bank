@@ -26,6 +26,7 @@ dependencies:
   fl_chart: ^0.9.4
   solid_bottom_sheet: ^0.1.9
   http: ^0.12.1
+  flutter_spinkit: "^4.1.2"
 
 dev_dependencies:
   flutter_test:

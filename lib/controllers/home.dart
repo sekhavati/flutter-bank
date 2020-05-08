@@ -2,6 +2,7 @@ import 'package:flutter/widgets.dart';
 import 'package:flutterbank/bank_client.dart';
 import 'package:flutterbank/models/account.dart';
 import 'package:flutterbank/screens/home.dart';
+import 'package:flutterbank/widgets/loading_spinner.dart';
 
 class HomeScreenController extends StatefulWidget {
   static const String kRouteId = "home";
@@ -38,6 +39,6 @@ class _HomeScreenControllerState extends State<HomeScreenController> {
 
   @override
   Widget build(BuildContext context) {
-    return _isLoading ? Text('Loading...') : HomeScreen(account: _account);
+    return _isLoading ? LoadingSpinner() : HomeScreen(account: _account);
   }
 }
