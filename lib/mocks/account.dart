@@ -1,5 +1,7 @@
-const accountJson = '''
+import 'dart:math';
+
+final accountJson = '''
 {
-  "totalBalance": 123.99
+  "totalBalance": ${Random().nextInt(20000).toDouble()}
 }
 ''';
