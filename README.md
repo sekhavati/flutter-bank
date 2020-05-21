@@ -1,16 +1,7 @@
-# flutterbank
+# flutter-bank
 
-A pretend banking application
+I recently began learning Flutter/Dart and built this application to put what I had learnt into practice. 
 
-## Getting Started
+Overall I was impressed by the technology and found it straightforward to get going with. At first I didn't like the look of code you wrote when constructing widgets, I felt like the heavy indentation wasn't particularly readbable but over time I became acustom to it. The amount of stuff the Flutter library offers is superb - having said that though there is a lot to get familiar with (it reminds me of the JDK in someways) and this is where I feel I'd have to invest time if I was going to get serious about Flutter.
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+I hope to come back to this little app and improve it over time but I have many other things I'm planning to learn about. The code quality leaves something to be desired but was just a noddy app to kick start something.
