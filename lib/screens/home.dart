@@ -48,7 +48,7 @@ class HomeScreen extends StatelessWidget {
         ),
       ),
       bottomSheet: SolidBottomSheet(
-        maxHeight: 400,
+        maxHeight: 410,
         headerBar: Container(
           color: kSwatchColor2,
           child: Container(
